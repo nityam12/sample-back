@@ -34,26 +34,28 @@ app.get("/users", function (req, res) {
   });
 });
 
-const DB = process.env.DATABASE.replace(
-  "<PASSWORD>",
-  process.env.DATABASE_PASSWORD
-);
+//  const DATABASE="mongodb+srv://nityam:<PASSWORD>@cluster0-mgvuy.mongodb.net/sample?retryWrites=true&w=majority"
 
-mongoose
-  .connect(DB, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("DB connection successful!"));
+// const DB = DATABASE.replace(
+//   "<PASSWORD>",
+//   process.env.DATABASE_PASSWORD
+// );
 
-const db = mongoose.connection;
-db.on("error", console.error.bind(console, "Error connecting to MOngOB"));
+// mongoose
+//   .connect(DB, {
+//     useNewUrlParser: true,
+//     useCreateIndex: true,
+//     useFindAndModify: false,
+//     useUnifiedTopology: true,
+//   })
+//   .then(() => console.log("DB connection successful!"));
 
-db.once("open", function () {
-  console.log("connected to Database::MongoDB");
-});
+// const db = mongoose.connection;
+// db.on("error", console.error.bind(console, "Error connecting to MOngOB"));
+
+// db.once("open", function () {
+//   console.log("connected to Database::MongoDB");
+// });
 
 module.exports = db;
 
