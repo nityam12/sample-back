@@ -27,9 +27,9 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.get("/users", function (req, res) {
-  return res.status(200).json({
-    lists:{
-      users:list
+  return res.status(200).send({
+    lists: {
+      users: list,
     },
   });
 });
