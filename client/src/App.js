@@ -83,10 +83,6 @@ class App extends Component {
         />
 
         <CardList users={filteredusers}></CardList>
-
-        {/* <Switch>
-          <Route path="/register/" component={Register} />
-        </Switch> */}
       </div>
     );
   }
