@@ -7,7 +7,7 @@ const dotenv = require("dotenv");
 dotenv.config({ path: "./config.env" });
 const mongoose = require("mongoose");
 const list = require("./data.js");
-// if (process.env.NODE_ENV !== "production") require("dotenv").config();
+
 const app = express();
 
 const port = process.env.PORT || 5000;
@@ -56,8 +56,6 @@ app.get("/users", function (req, res) {
 // db.once("open", function () {
 //   console.log("connected to Database::MongoDB");
 // });
-
-module.exports = db;
 
 app.listen(port, (error) => {
   if (error) {
