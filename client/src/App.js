@@ -19,7 +19,7 @@ class App extends Component {
   componentDidMount() {
     axios({
       url: "users",
-      method: "GET",
+      method: "POST",
     })
       .then((response) => {
         this.setState({ list: response.data.lists.users.list });
