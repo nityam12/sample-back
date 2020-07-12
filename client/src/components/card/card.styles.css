@@ -1,0 +1,44 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #95dada;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 25px;
+  cursor: pointer;
+  -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: transform 0.25s ease-out;
+}
+
+img {
+  height: 180px;
+
+}
+
+.card-container:hover {
+  transform: scale(1.05);
+}
+
+.status {}
+
+.left {
+  color: red;
+}
+
+.on {
+  color: rgb(99, 99, 8);
+}
+
+.active {
+  color: green;
+}
+
+.name {}
+
+.age {}
+
+.gender {
+  text-transform: capitalize;
+}
