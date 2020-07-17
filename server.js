@@ -34,29 +34,6 @@ app.post("/users", function (req, res) {
   });
 });
 
-//  const DATABASE="mongodb+srv://nityam:<PASSWORD>@cluster0-mgvuy.mongodb.net/sample?retryWrites=true&w=majority"
-
-// const DB = DATABASE.replace(
-//   "<PASSWORD>",
-//   process.env.DATABASE_PASSWORD
-// );
-
-// mongoose
-//   .connect(DB, {
-//     useNewUrlParser: true,
-//     useCreateIndex: true,
-//     useFindAndModify: false,
-//     useUnifiedTopology: true,
-//   })
-//   .then(() => console.log("DB connection successful!"));
-
-// const db = mongoose.connection;
-// db.on("error", console.error.bind(console, "Error connecting to MOngOB"));
-
-// db.once("open", function () {
-//   console.log("connected to Database::MongoDB");
-// });
-
 app.listen(port, (error) => {
   if (error) {
     throw error;
